@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root  {
+    --first-font: "Inter";
+    --second-font: "Lexend Deca";
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.card {
+    height: 400px;
+    position: relative;
+    display: grid;
+    background-color: hsl(244, 38%, 16%);
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.container img {
+    float: right;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: -3%;
+    left: 53%;
+}
+
+.container img::before {
+    content: "";
+    position: absolute;
+    background-color: hsl(277, 64%, 61%);
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    position: relative;
+    right: 45%;
+    top: 10.5px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img::after {
+    position: absolute;
+    content: "";
+    top: -3%;
+    left: 53%;
+    height: 100%;
+    width: 100%;
+    /* float: right; */
+    background-color: hsla(277, 64%, 61%, 0.6);
+}
+
+.container .head-texts {
+    font-family: var(--first-font);
+    font-size: 18px;
+    padding: 10%;
+}
+
+.container .head-texts h1 span{
+    color: hsl(277, 64%, 61%);
+}
+
+.container .head-texts p.subtitle {
+    margin-top: 30px;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 280px;
+    line-height: 1.6;
+    opacity: .7;
+}
+
+.container .head-texts .stat-box {
+    margin-top: 75px;
+    display: flex;
+    padding-right: 15px;
+    justify-content: space-between;
+}
+
+.container .head-texts .stat-box p.num {
+    font-weight: 700;
+    font-family: "inter";
+    line-height: 1.8;
+    margin-bottom: 2px;
+
+}
+
+.container .head-texts .stat-box div p:nth-child(2) {
+    color: hsla(0, 0%, 100%, 0.75);
+    text-transform: uppercase;
+    font-size: 10px;
+    text-indent: 0px;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+    body {
+        font-size: 12px;
+    }
+    .head-texts {
+        padding: 12%;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .stat-box {
+        padding-top: 30px;
+    }
+
+    .stat-box p.num {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 767px)  {
+    body {
+        text-align: center;
+    }
+
+    .container .head-texts .stat-box {
+        margin-top: -40px;
+        display: flex;
+        padding-right: 15px;
+        justify-content: space-between;
+        position: absolute;
+        left: 40%;
+        top: 67%;
+    }
+    .card {
+        grid-template-columns: 1fr;
+        height: 680px;
+    }
+
+    .img {
+        order: -1;
+    }
+
+    .head-texts {
+        padding: 12% 8%;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .stat-box {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .stat-box div {
+        margin-top: 20px;
+    }
+
+    .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 45%;
+        top: -6px;
+        border-start-end-radius: 10px;
+        border-start-start-radius: 10px;
+    }
+    .img::after {
+        position: absolute;
+        content: "";
+        top: -3%;
+        left: 45%;
+        height: 100%;
+        width: 100%;
+        border-start-end-radius: 10px;
+        border-start-start-radius: 10px;
+        background-color: hsla(277, 64%, 61%, 0.6);
+    }
+
+    .container .head-texts p.subtitle {
+        margin-top: 30px;
+        font-size: 14px;
+        color: hsla(0, 0%, 100%, 0.75);
+        width: 245px;
+        line-height: 1.6;
+        opacity: .7;
+        position: relative;
+        left: 3%;
+        top: -5%;
+    }
+}
